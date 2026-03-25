@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { genres, categories, galleryImages, graphicalStyles, type GalleryImage } from '../data/genres'
+import { genres, categories, galleryImages, graphicalStyles, assetUrl, type GalleryImage } from '../data/genres'
 import NavBar from '../components/NavBar'
 
 function getStoredColumns(): number {
@@ -49,7 +49,7 @@ function MasonryTile({ img, onClick }: { img: GalleryImage; onClick: () => void 
       }}
     >
       <img
-        src={img.src}
+        src={assetUrl(img.src)}
         alt={img.title ?? primaryGenre?.name ?? ''}
         style={{ width: '100%', display: 'block' }}
         loading="lazy"

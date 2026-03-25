@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import type { Genre } from '../data/genres'
-import { genres, galleryImages } from '../data/genres'
+import { genres, galleryImages, assetUrl } from '../data/genres'
 import NavBar from '../components/NavBar'
 import ImageGallery from '../components/ImageGallery'
 import TonePlayer from '../components/TonePlayer'
@@ -147,7 +147,7 @@ export default function GenreWorld({ genre, onBack, onHome, onSelectGenre, onSea
             width: '100%',
             padding: '36px 48px',
             background: genre.heroImage
-              ? `url(${genre.heroImage}) center/cover no-repeat`
+              ? `url(${assetUrl(genre.heroImage)}) center/cover no-repeat`
               : `linear-gradient(160deg, ${genre.coverColors[0]}, ${genre.coverColors[1]}, ${genre.coverColors.at(2) ?? genre.coverColors[1]})`,
             overflow: 'hidden',
             flexShrink: 0,

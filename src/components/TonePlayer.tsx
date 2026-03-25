@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect, useCallback } from 'react'
+import { assetUrl } from '../data/genres'
 
 export type ToneTrack = {
   title: string
@@ -87,7 +88,7 @@ export default function TonePlayer({ tracks, open, onClose }: Props) {
       await fadeOut(audioRef.current)
     }
 
-    const audio = new Audio(track.audioFile)
+    const audio = new Audio(assetUrl(track.audioFile))
     audio.volume = 0
     audio.loop = true
     audioRef.current = audio

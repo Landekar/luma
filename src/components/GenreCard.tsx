@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import type { Genre } from '../data/genres'
+import { assetUrl } from '../data/genres'
 
 const CATEGORY_LABELS: Record<string, string> = {
   fantasy: 'Fantasy',
@@ -34,7 +35,7 @@ export default function GenreCard({ genre, onClick, compact }: Props) {
         aspectRatio: compact ? '4/3' : '3/4',
         cursor: comingSoon ? 'default' : 'pointer',
         background: gradient,
-        backgroundImage: genre.heroImage ? `url(${genre.heroImage})` : undefined,
+        backgroundImage: genre.heroImage ? `url(${assetUrl(genre.heroImage)})` : undefined,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         borderRadius: '8px',
