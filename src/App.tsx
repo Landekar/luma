@@ -4,6 +4,7 @@ import Landing from './pages/Landing'
 import Catalog from './pages/Catalog'
 import GenreWorld from './pages/GenreWorld'
 import SearchResults from './pages/SearchResults'
+import ChatWidget from './components/ChatWidget'
 import { genres } from './data/genres'
 import { useHashRouter } from './hooks/useHashRouter'
 
@@ -22,9 +23,10 @@ export default function App() {
   const { page, params } = route
 
   const selectedGenre = genres.find(g => g.id === page)
+  let content: React.ReactNode
 
   if (selectedGenre) {
-    return (
+    content = (
       <GenreWorld
         genre={selectedGenre}
         onBack={goCatalog}
@@ -33,10 +35,8 @@ export default function App() {
         onSearch={handleSearch}
       />
     )
-  }
-
-  if (page === 'search') {
-    return (
+  } else if (page === 'search') {
+    content = (
       <SearchResults
         query={params.q ?? ''}
         onSelect={goGenre}
@@ -46,10 +46,8 @@ export default function App() {
         onSelectCategory={setSelectedCategory}
       />
     )
-  }
-
-  if (page === 'catalog') {
-    return (
+  } else if (page === 'catalog') {
+    content = (
       <Catalog
         onSelect={goGenre}
         onHome={goHome}
@@ -58,7 +56,14 @@ export default function App() {
         onSelectCategory={setSelectedCategory}
       />
     )
+  } else {
+    content = <Landing onEnter={goCatalog} />
   }
 
-  return <Landing onEnter={goCatalog} />
+  return (
+    <>
+      {content}
+      <ChatWidget onSelectGenre={goGenre} />
+    </>
+  )
 }

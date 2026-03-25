@@ -124,3 +124,192 @@ body {
 .anim-delay-2 { animation-delay: 0.15s; }
 .anim-delay-3 { animation-delay: 0.3s; }
 .anim-delay-4 { animation-delay: 0.5s; }
+
+.chat-widget-shell {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.chat-widget-panel {
+  width: min(380px, calc(100vw - 32px));
+  height: min(620px, calc(100vh - 120px));
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-card);
+  border-radius: 24px;
+  background:
+    linear-gradient(180deg, rgba(200,184,154,0.08), transparent 18%),
+    var(--bg);
+  box-shadow: 0 24px 90px rgba(0, 0, 0, 0.34);
+  overflow: hidden;
+  backdrop-filter: blur(18px);
+}
+
+.chat-widget-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 16px 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.chat-widget-kicker {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  color: var(--text-faint);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.chat-widget-title {
+  font-size: 18px;
+  line-height: 1.1;
+  color: var(--text-primary);
+  font-family: var(--serif);
+}
+
+.chat-widget-icon {
+  border: 1px solid var(--border);
+  background: none;
+  color: var(--text-secondary);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.chat-widget-thread {
+  flex: 1;
+  overflow-y: auto;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.chat-widget-user-bubble {
+  max-width: 88%;
+  padding: 11px 13px;
+  border-radius: 14px;
+  background: var(--accent-subtle);
+  border: 1px solid var(--accent-dim);
+  color: var(--text-primary);
+  white-space: pre-wrap;
+  line-height: 1.55;
+  font-size: 13px;
+}
+
+.chat-widget-thinking {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 10px;
+  align-self: flex-start;
+}
+
+.chat-widget-starters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0 14px 12px;
+}
+
+.chat-widget-starter {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  padding: 7px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.chat-widget-composer {
+  padding: 0 14px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chat-widget-input {
+  width: 100%;
+  min-height: 86px;
+  resize: none;
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 16px;
+  padding: 12px 14px;
+  color: var(--text-primary);
+  outline: none;
+  font: inherit;
+  line-height: 1.55;
+}
+
+.chat-widget-send {
+  align-self: flex-end;
+  background: var(--accent-subtle);
+  border: 1px solid var(--accent-dim);
+  color: var(--accent);
+  padding: 10px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.chat-widget-send:disabled {
+  background: var(--bg-panel);
+  border-color: var(--border);
+  color: var(--text-faint);
+  cursor: not-allowed;
+}
+
+.chat-widget-toggle {
+  min-width: 64px;
+  height: 64px;
+  padding: 0 18px;
+  border-radius: 999px;
+  border: 1px solid var(--accent-dim);
+  background:
+    radial-gradient(circle at 30% 30%, rgba(200,184,154,0.22), transparent 55%),
+    var(--bg-card);
+  color: var(--accent);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 640px) {
+  .chat-widget-shell {
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    align-items: stretch;
+  }
+
+  .chat-widget-panel {
+    width: 100%;
+    height: min(68vh, 560px);
+  }
+
+  .chat-widget-toggle {
+    align-self: flex-end;
+  }
+}

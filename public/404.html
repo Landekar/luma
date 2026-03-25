@@ -2,20 +2,20 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Luma</title>
+    <title>Coalesce</title>
     <script>
       // GitHub Pages SPA redirect
       // Converts path-based URL to hash-based URL and redirects to index.html
       var path = window.location.pathname
-        .replace('/luma', '')  // remove base path
+        .replace('/coalesce', '')  // remove base path
         .replace(/^\//, '')    // remove leading slash
       if (path) {
         window.location.replace(
-          window.location.origin + '/luma/#/' + path +
+          window.location.origin + '/coalesce/#/' + path +
           (window.location.search || '')
         )
       } else {
-        window.location.replace(window.location.origin + '/luma/')
+        window.location.replace(window.location.origin + '/coalesce/')
       }
     </script>
   </head>

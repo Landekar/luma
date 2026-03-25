@@ -10,7 +10,7 @@ const ThemeContext = createContext<{
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>(() => {
     try {
-      return (localStorage.getItem('luma_theme') as Theme) ?? 'dark'
+      return (localStorage.getItem('coalesce_theme') as Theme) ?? 'dark'
     } catch {
       return 'dark'
     }
@@ -18,7 +18,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)
-    try { localStorage.setItem('luma_theme', theme) } catch {}
+    try { localStorage.setItem('coalesce_theme', theme) } catch {}
   }, [theme])
 
   const toggle = () => setTheme(t => t === 'dark' ? 'light' : 'dark')

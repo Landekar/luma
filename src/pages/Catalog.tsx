@@ -1,11 +1,10 @@
 import { useState } from 'react'
 import { genres, categories } from '../data/genres'
 import NavBar from '../components/NavBar'
-import Sidebar from '../components/Sidebar'
 import GenreCard from '../components/GenreCard'
 
 function getStoredDensity(): number {
-  try { return parseInt(localStorage.getItem('luma_catalog_density') ?? '5') || 5 } catch { return 5 }
+  try { return parseInt(localStorage.getItem('coalesce_catalog_density') ?? '5') || 5 } catch { return 5 }
 }
 
 type Props = {
@@ -26,7 +25,7 @@ export default function Catalog({ onSelect, onHome, onSearch, selectedCategory, 
 
   const changeDensity = (n: number) => {
     setDensity(n)
-    try { localStorage.setItem('luma_catalog_density', String(n)) } catch {}
+    try { localStorage.setItem('coalesce_catalog_density', String(n)) } catch {}
   }
 
   const currentCategory = categories.find(c => c.id === selectedCategory)
@@ -36,15 +35,7 @@ export default function Catalog({ onSelect, onHome, onSearch, selectedCategory, 
     <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden', background: 'var(--bg)' }}>
       <NavBar onHome={onHome} onSearch={onSearch} />
 
-      <div style={{ display: 'flex', flex: 1, overflow: 'hidden' }}>
-        <Sidebar
-          mode="catalog"
-          categories={categories}
-          selectedCategory={selectedCategory}
-          onSelectCategory={onSelectCategory}
-        />
-
-        <div style={{ flex: 1, overflowY: 'auto' as const, padding: '32px 48px 80px' }}>
+      <div style={{ flex: 1, overflowY: 'auto' as const, padding: '32px 48px 80px' }}>
           {/* Heading */}
           <div style={{ marginBottom: '24px' }}>
             <div style={{ fontSize: '11px', letterSpacing: '0.2em', color: 'var(--text-faint)', textTransform: 'uppercase', marginBottom: '8px' }}>
@@ -170,7 +161,6 @@ export default function Catalog({ onSelect, onHome, onSearch, selectedCategory, 
               ))}
             </div>
           )}
-        </div>
       </div>
     </div>
   )

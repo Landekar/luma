@@ -13,7 +13,7 @@ type Props = {
 }
 
 function getStoredVolume(): number {
-  try { return parseFloat(localStorage.getItem('luma_volume') ?? '0.6') } catch { return 0.6 }
+  try { return parseFloat(localStorage.getItem('coalesce_volume') ?? '0.6') } catch { return 0.6 }
 }
 
 export default function TonePlayer({ tracks, open, onClose }: Props) {
@@ -29,7 +29,7 @@ export default function TonePlayer({ tracks, open, onClose }: Props) {
   // Sync volume to audio element and localStorage
   useEffect(() => {
     if (audioRef.current) audioRef.current.volume = volume
-    try { localStorage.setItem('luma_volume', String(volume)) } catch {}
+    try { localStorage.setItem('coalesce_volume', String(volume)) } catch {}
   }, [volume])
 
   // Auto-play when opened, stop when closed

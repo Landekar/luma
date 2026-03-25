@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc:*)",
+      "Bash(npx vite:*)",
+      "Bash(npm run:*)",
+      "WebSearch",
+      "Bash(npx create-next-app@latest vibe-fm --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --yes)",
+      "Bash(npm install:*)",
+      "Bash(gh repo:*)",
+      "Bash(where gh:*)",
+      "Read(//c/Program Files/**)",
+      "Read(//c/Program Files \\(x86\\)/**)",
+      "Bash(npm list:*)",
+      "Bash(npx --yes @gitbeaker/cli --version)",
+      "Bash(command -v curl)",
+      "Bash(echo \"protocol=https:*)",
+      "Bash(git credential:*)"
+    ],
+    "additionalDirectories": [
+      "g:\\Pictures\\Pictures\\Проекты\\Obraz Education\\РАЗРАБОТКИ\\ПРОГРАММЫ\\vibe-fm",
+      "g:\\Pictures\\Pictures\\Проекты\\Ображ Education\\РАЗРАБОТКИ\\ПРОГРАММЫ\\vibe-fm\\src\\components",
+      "g:\\Pictures\\Pictures\\Проекты\\Obraz Education\\РАЗРАБОТКИ\\ПРОГРАММЫ"
+    ]
+  }
+}

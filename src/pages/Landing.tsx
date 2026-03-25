@@ -25,7 +25,7 @@ export default function Landing({ onEnter }: Props) {
         justifyContent: 'space-between',
         alignItems: 'center',
       }}>
-        <span style={{ fontSize: '13px', letterSpacing: '0.25em', color: 'var(--accent)' }}>LUMA</span>
+        <span style={{ fontSize: '13px', letterSpacing: '0.25em', color: 'var(--accent)' }}>COALESCE</span>
         <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
           <span style={{ fontSize: '12px', color: 'var(--text-faint)', letterSpacing: '0.1em' }}>KONSTRUKT</span>
           <ThemeToggle />
@@ -53,7 +53,7 @@ export default function Landing({ onEnter }: Props) {
           marginBottom: '48px',
           fontFamily: 'Georgia, serif',
         }}>
-          LUMA
+          COALESCE
         </h1>
 
         <p className="anim-fade-up anim-delay-2" style={{
@@ -66,7 +66,7 @@ export default function Landing({ onEnter }: Props) {
           fontStyle: 'italic',
         }}>
           Sound has shape. Color has pitch. Every aesthetic world has a sonic counterpart —
-          and every sonic palette casts a visual shadow. Luma is where those correspondences live.
+          and every sonic palette casts a visual shadow. Coalesce is where those correspondences live.
         </p>
 
         <div className="anim-fade-up anim-delay-4" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px' }}>
@@ -92,7 +92,7 @@ export default function Landing({ onEnter }: Props) {
               e.currentTarget.style.background = 'none'
             }}
           >
-            ENTER LUMA
+            ENTER COALESCE
           </button>
           <span style={{ fontSize: '11px', color: 'var(--text-faint)', letterSpacing: '0.15em', textTransform: 'uppercase' }}>
             {genres.filter(g => g.status === 'available').length} genre worlds

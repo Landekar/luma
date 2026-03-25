@@ -19,7 +19,7 @@ export default function NavBar({ backLabel, onBack, onHome, onSearch }: Props) {
       flexShrink: 0,
       background: 'var(--bg)',
     }}>
-      {/* Left: logo + LUMA (aligned with sidebar width) */}
+      {/* Left: logo + COALESCE (aligned with sidebar width) */}
       <div
         onClick={onHome}
         style={{
@@ -45,7 +45,7 @@ export default function NavBar({ backLabel, onBack, onHome, onSearch }: Props) {
           <span style={{ fontSize: '8px', color: 'var(--accent)', lineHeight: 1 }}>✕</span>
         </div>
         <span style={{ fontSize: '13px', letterSpacing: '0.3em', color: 'var(--accent)', textTransform: 'uppercase' }}>
-          Luma
+          Coalesce
         </span>
       </div>
 

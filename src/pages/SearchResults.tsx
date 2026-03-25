@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import type { Genre } from '../data/genres'
-import { genres, categories } from '../data/genres'
+import { genres } from '../data/genres'
 import NavBar from '../components/NavBar'
-import Sidebar from '../components/Sidebar'
 import GenreCard from '../components/GenreCard'
 
 type ReferenceMatch = { genre: Genre; analogue: { title: string; medium: string; note: string } }
@@ -27,10 +26,10 @@ const sectionLabel: React.CSSProperties = {
 }
 
 function getStoredDensity(): number {
-  try { return parseInt(localStorage.getItem('luma_catalog_density') ?? '5') || 5 } catch { return 5 }
+  try { return parseInt(localStorage.getItem('coalesce_catalog_density') ?? '5') || 5 } catch { return 5 }
 }
 
-export default function SearchResults({ query, onSelect, onHome, onSearch, selectedCategory, onSelectCategory }: Props) {
+export default function SearchResults({ query, onSelect, onHome, onSearch }: Props) {
   const [density] = useState(getStoredDensity)
   const q = query.toLowerCase()
 
@@ -58,15 +57,7 @@ export default function SearchResults({ query, onSelect, onHome, onSearch, selec
     <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden', background: 'var(--bg)' }}>
       <NavBar onHome={onHome} onSearch={onSearch} />
 
-      <div style={{ display: 'flex', flex: 1, overflow: 'hidden' }}>
-        <Sidebar
-          mode="catalog"
-          categories={categories}
-          selectedCategory={selectedCategory}
-          onSelectCategory={onSelectCategory}
-        />
-
-        <div style={{ flex: 1, overflowY: 'auto' as const, padding: '40px 48px 80px' }}>
+      <div style={{ flex: 1, overflowY: 'auto' as const, padding: '40px 48px 80px' }}>
           <div style={{ marginBottom: '40px' }}>
             <div style={{ fontSize: '11px', letterSpacing: '0.2em', color: 'var(--text-faint)', textTransform: 'uppercase', marginBottom: '8px' }}>
               {totalResults > 0 ? `${totalResults} result${totalResults === 1 ? '' : 's'}` : 'No results'}
@@ -115,7 +106,6 @@ export default function SearchResults({ query, onSelect, onHome, onSearch, selec
               No genres matched. Try a different keyword.
             </p>
           )}
-        </div>
       </div>
     </div>
   )

@@ -1,4 +1,4 @@
-# LUMA — Roadmap
+# COALESCE — Roadmap
 
 Last updated: 2026-03-16
 
@@ -57,7 +57,7 @@ Last updated: 2026-03-16
   - Typography (select fonts, set specimen phrase)
   - Materials (choose from library or describe custom)
   - Shape language (select forms, write principle)
-  - Sound references (link tracks or reference from Luma library)
+  - Sound references (link tracks or reference from Coalesce library)
   - Analogues / references (add titles, notes)
   - Abstract (free text)
 - [ ] Save to IndexedDB (free tier) / Supabase (paid tier)
@@ -77,7 +77,7 @@ Last updated: 2026-03-16
 ---
 
 ## PHASE 3 — Community Layer
-**Goal:** Published directions create a feed. Luma becomes a living ecosystem.
+**Goal:** Published directions create a feed. Coalesce becomes a living ecosystem.
 **Cost:** Supabase Pro (~$25/month), asset caching storage (scales with published content)
 
 ### 3.1 — Publishing Pipeline
@@ -101,7 +101,7 @@ Last updated: 2026-03-16
 ### 3.4 — Phase 3 Complete Checkpoint
 - Community feed with quality-gated published directions
 - Users follow each other, fork directions
-- Luma has three return reasons: browse library, edit workspace, discover community
+- Coalesce has three return reasons: browse library, edit workspace, discover community
 - **Action:** Evaluate course layer connection to Obraz. Consider licensing to studios/schools.
 
 ---

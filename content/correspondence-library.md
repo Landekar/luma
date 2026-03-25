@@ -1,4 +1,4 @@
-# LUMA — CORRESPONDENCE LIBRARY
+# COALESCE — CORRESPONDENCE LIBRARY
 ## Master Content Repository
 ### Last updated: 2026-03-14
 
@@ -9,7 +9,7 @@ It is NOT served to the website. It is the editorial backbone from which genre w
 
 ## HOW TO USE THIS FILE
 
-Each genre world page on Luma draws from the relevant sections of this library.
+Each genre world page on Coalesce draws from the relevant sections of this library.
 When building a new genre world, find the instruments, textures, and processing that match its sonic palette here, then compose them into a unified art direction.
 
 ---
