@@ -1,3 +1,7 @@
+// Resolves hardcoded /paracosm/ paths for both Vercel (base='/') and GitHub Pages (base='/paracosm/')
+export const assetUrl = (src: string): string =>
+  src.replace('/paracosm/', import.meta.env.BASE_URL)
+
 export type GalleryImage = {
   id: string
   src: string
@@ -32,53 +36,53 @@ export const graphicalStyles: GraphicalStyle[] = [
 // Each image is tagged with one or more art directions AND a graphical style
 export const galleryImages: GalleryImage[] = [
   // Gothic Dark Fantasy
-  { id: 'gdf-01', src: '/coalesce/gallery/gothic-castle-ruins.webp', title: 'Castle ruins at dusk', source: 'Gothic 1', genres: ['gothic-dark-fantasy', 'medieval'], style: 'ps2-era', featured: true },
-  { id: 'gdf-02', src: '/coalesce/gallery/gothic-cathedral-interior.webp', title: 'Cathedral nave', source: 'Dark Souls', genres: ['gothic-dark-fantasy'], style: 'photorealism' },
-  { id: 'gdf-03', src: '/coalesce/gallery/gothic-graveyard-fog.webp', title: 'Graveyard in fog', source: 'Bloodborne', genres: ['gothic-dark-fantasy', 'hauntology'], style: 'photorealism' },
-  { id: 'gdf-04', src: '/coalesce/gallery/gothic-tower-cliff.webp', title: 'Tower on the cliff', source: 'Gothic 1', genres: ['gothic-dark-fantasy'], style: 'ps2-era' },
-  { id: 'gdf-05', src: '/coalesce/gallery/gothic-dmc-castle.webp', title: 'Demon fortress', source: 'Devil May Cry', genres: ['gothic-dark-fantasy'], style: 'ps2-era' },
-  { id: 'gdf-06', src: '/coalesce/gallery/gothic-binding-isaac.webp', title: 'Basement descent', source: 'Binding of Isaac', genres: ['gothic-dark-fantasy'], style: 'hand-painted' },
-  { id: 'gdf-07', src: '/coalesce/gallery/gothic-castlevania.webp', title: 'Dracula\'s castle', source: 'Castlevania: SOTN', genres: ['gothic-dark-fantasy'], style: 'pixel-art' },
-  { id: 'gdf-08', src: '/coalesce/gallery/gothic-concept-knight.webp', title: 'Fallen knight', genres: ['gothic-dark-fantasy'], style: 'concept-art' },
+  { id: 'gdf-01', src: '/paracosm/gallery/gothic-castle-ruins.webp', title: 'Castle ruins at dusk', source: 'Gothic 1', genres: ['gothic-dark-fantasy', 'medieval'], style: 'ps2-era', featured: true },
+  { id: 'gdf-02', src: '/paracosm/gallery/gothic-cathedral-interior.webp', title: 'Cathedral nave', source: 'Dark Souls', genres: ['gothic-dark-fantasy'], style: 'photorealism' },
+  { id: 'gdf-03', src: '/paracosm/gallery/gothic-graveyard-fog.webp', title: 'Graveyard in fog', source: 'Bloodborne', genres: ['gothic-dark-fantasy', 'hauntology'], style: 'photorealism' },
+  { id: 'gdf-04', src: '/paracosm/gallery/gothic-tower-cliff.webp', title: 'Tower on the cliff', source: 'Gothic 1', genres: ['gothic-dark-fantasy'], style: 'ps2-era' },
+  { id: 'gdf-05', src: '/paracosm/gallery/gothic-dmc-castle.webp', title: 'Demon fortress', source: 'Devil May Cry', genres: ['gothic-dark-fantasy'], style: 'ps2-era' },
+  { id: 'gdf-06', src: '/paracosm/gallery/gothic-binding-isaac.webp', title: 'Basement descent', source: 'Binding of Isaac', genres: ['gothic-dark-fantasy'], style: 'hand-painted' },
+  { id: 'gdf-07', src: '/paracosm/gallery/gothic-castlevania.webp', title: 'Dracula\'s castle', source: 'Castlevania: SOTN', genres: ['gothic-dark-fantasy'], style: 'pixel-art' },
+  { id: 'gdf-08', src: '/paracosm/gallery/gothic-concept-knight.webp', title: 'Fallen knight', genres: ['gothic-dark-fantasy'], style: 'concept-art' },
 
   // Retro-Futurism
-  { id: 'rf-01', src: '/coalesce/gallery/retro-fallout-diner.webp', title: 'Atomic diner', source: 'Fallout 4', genres: ['retro-futurism'], style: 'photorealism', featured: true },
-  { id: 'rf-02', src: '/coalesce/gallery/retro-googie-architecture.webp', title: 'Googie gas station', genres: ['retro-futurism'], style: 'concept-art' },
-  { id: 'rf-03', src: '/coalesce/gallery/retro-red-alert.webp', title: 'War factory', source: 'C&C Red Alert', genres: ['retro-futurism', 'military-scifi'], style: 'pre-rendered' },
-  { id: 'rf-04', src: '/coalesce/gallery/retro-surviving-mars.webp', title: 'Mars colony dome', source: 'Surviving Mars', genres: ['retro-futurism', 'solarpunk'], style: 'photorealism' },
-  { id: 'rf-05', src: '/coalesce/gallery/retro-jetsons-interior.webp', title: 'Space age living room', genres: ['retro-futurism'], style: 'cel-shaded' },
-  { id: 'rf-06', src: '/coalesce/gallery/retro-syd-mead.webp', title: 'Future cityscape', source: 'Syd Mead', genres: ['retro-futurism', 'cyberpunk'], style: 'concept-art' },
+  { id: 'rf-01', src: '/paracosm/gallery/retro-fallout-diner.webp', title: 'Atomic diner', source: 'Fallout 4', genres: ['retro-futurism'], style: 'photorealism', featured: true },
+  { id: 'rf-02', src: '/paracosm/gallery/retro-googie-architecture.webp', title: 'Googie gas station', genres: ['retro-futurism'], style: 'concept-art' },
+  { id: 'rf-03', src: '/paracosm/gallery/retro-red-alert.webp', title: 'War factory', source: 'C&C Red Alert', genres: ['retro-futurism', 'military-scifi'], style: 'pre-rendered' },
+  { id: 'rf-04', src: '/paracosm/gallery/retro-surviving-mars.webp', title: 'Mars colony dome', source: 'Surviving Mars', genres: ['retro-futurism', 'solarpunk'], style: 'photorealism' },
+  { id: 'rf-05', src: '/paracosm/gallery/retro-jetsons-interior.webp', title: 'Space age living room', genres: ['retro-futurism'], style: 'cel-shaded' },
+  { id: 'rf-06', src: '/paracosm/gallery/retro-syd-mead.webp', title: 'Future cityscape', source: 'Syd Mead', genres: ['retro-futurism', 'cyberpunk'], style: 'concept-art' },
 
   // Cyberpunk
-  { id: 'cp-01', src: '/coalesce/gallery/cyber-night-city.webp', title: 'Night City streets', source: 'Cyberpunk 2077', genres: ['cyberpunk'], style: 'photorealism', featured: true },
-  { id: 'cp-02', src: '/coalesce/gallery/cyber-deus-ex.webp', title: 'Augmented alley', source: 'Deus Ex', genres: ['cyberpunk'], style: 'ps2-era' },
-  { id: 'cp-03', src: '/coalesce/gallery/cyber-snatcher.webp', title: 'Neo Kobe City', source: 'Snatcher', genres: ['cyberpunk'], style: 'pixel-art' },
-  { id: 'cp-04', src: '/coalesce/gallery/cyber-ghostrunner.webp', title: 'Dharma Tower', source: 'Ghostrunner', genres: ['cyberpunk'], style: 'photorealism' },
-  { id: 'cp-05', src: '/coalesce/gallery/cyber-va11halla.webp', title: 'Jill\'s bar', source: 'VA-11 Hall-A', genres: ['cyberpunk', 'analogism'], style: 'pixel-art' },
+  { id: 'cp-01', src: '/paracosm/gallery/cyber-night-city.webp', title: 'Night City streets', source: 'Cyberpunk 2077', genres: ['cyberpunk'], style: 'photorealism', featured: true },
+  { id: 'cp-02', src: '/paracosm/gallery/cyber-deus-ex.webp', title: 'Augmented alley', source: 'Deus Ex', genres: ['cyberpunk'], style: 'ps2-era' },
+  { id: 'cp-03', src: '/paracosm/gallery/cyber-snatcher.webp', title: 'Neo Kobe City', source: 'Snatcher', genres: ['cyberpunk'], style: 'pixel-art' },
+  { id: 'cp-04', src: '/paracosm/gallery/cyber-ghostrunner.webp', title: 'Dharma Tower', source: 'Ghostrunner', genres: ['cyberpunk'], style: 'photorealism' },
+  { id: 'cp-05', src: '/paracosm/gallery/cyber-va11halla.webp', title: 'Jill\'s bar', source: 'VA-11 Hall-A', genres: ['cyberpunk', 'analogism'], style: 'pixel-art' },
 
   // Hauntology
-  { id: 'ht-01', src: '/coalesce/gallery/haunt-silent-hill-fog.webp', title: 'Fog world', source: 'Silent Hill 2', genres: ['hauntology', 'gothic-dark-fantasy'], style: 'ps2-era', featured: true },
-  { id: 'ht-02', src: '/coalesce/gallery/haunt-half-life-mesa.webp', title: 'Black Mesa lobby', source: 'Half-Life', genres: ['hauntology'], style: 'ps1-era' },
-  { id: 'ht-03', src: '/coalesce/gallery/haunt-minecraft-ruin.webp', title: 'Abandoned world', source: 'Minecraft', genres: ['hauntology', 'digital-pastoral'], style: 'low-poly' },
-  { id: 'ht-04', src: '/coalesce/gallery/haunt-re-mansion.webp', title: 'Spencer Mansion hall', source: 'Resident Evil', genres: ['hauntology', 'gothic-dark-fantasy'], style: 'pre-rendered' },
-  { id: 'ht-05', src: '/coalesce/gallery/haunt-liminal-pool.webp', title: 'Empty pool room', genres: ['hauntology', 'liminal'], style: 'photorealism' },
+  { id: 'ht-01', src: '/paracosm/gallery/haunt-silent-hill-fog.webp', title: 'Fog world', source: 'Silent Hill 2', genres: ['hauntology', 'gothic-dark-fantasy'], style: 'ps2-era', featured: true },
+  { id: 'ht-02', src: '/paracosm/gallery/haunt-half-life-mesa.webp', title: 'Black Mesa lobby', source: 'Half-Life', genres: ['hauntology'], style: 'ps1-era' },
+  { id: 'ht-03', src: '/paracosm/gallery/haunt-minecraft-ruin.webp', title: 'Abandoned world', source: 'Minecraft', genres: ['hauntology', 'digital-pastoral'], style: 'low-poly' },
+  { id: 'ht-04', src: '/paracosm/gallery/haunt-re-mansion.webp', title: 'Spencer Mansion hall', source: 'Resident Evil', genres: ['hauntology', 'gothic-dark-fantasy'], style: 'pre-rendered' },
+  { id: 'ht-05', src: '/paracosm/gallery/haunt-liminal-pool.webp', title: 'Empty pool room', genres: ['hauntology', 'liminal'], style: 'photorealism' },
 
   // Pastoral Folk
-  { id: 'pf-01', src: '/coalesce/gallery/pastoral-stardew.webp', title: 'Farm at sunrise', source: 'Stardew Valley', genres: ['pastoral-folk'], style: 'pixel-art', featured: true },
-  { id: 'pf-02', src: '/coalesce/gallery/pastoral-botw-field.webp', title: 'Hyrule Field', source: 'Breath of the Wild', genres: ['pastoral-folk', 'high-fantasy'], style: 'cel-shaded' },
-  { id: 'pf-03', src: '/coalesce/gallery/pastoral-meadow-paint.webp', title: 'Wildflower meadow', genres: ['pastoral-folk'], style: 'hand-painted' },
-  { id: 'pf-04', src: '/coalesce/gallery/pastoral-skyrim-village.webp', title: 'Riverwood', source: 'Skyrim', genres: ['pastoral-folk', 'medieval'], style: 'photorealism' },
+  { id: 'pf-01', src: '/paracosm/gallery/pastoral-stardew.webp', title: 'Farm at sunrise', source: 'Stardew Valley', genres: ['pastoral-folk'], style: 'pixel-art', featured: true },
+  { id: 'pf-02', src: '/paracosm/gallery/pastoral-botw-field.webp', title: 'Hyrule Field', source: 'Breath of the Wild', genres: ['pastoral-folk', 'high-fantasy'], style: 'cel-shaded' },
+  { id: 'pf-03', src: '/paracosm/gallery/pastoral-meadow-paint.webp', title: 'Wildflower meadow', genres: ['pastoral-folk'], style: 'hand-painted' },
+  { id: 'pf-04', src: '/paracosm/gallery/pastoral-skyrim-village.webp', title: 'Riverwood', source: 'Skyrim', genres: ['pastoral-folk', 'medieval'], style: 'photorealism' },
 
   // Digital Pastoral
-  { id: 'dp-01', src: '/coalesce/gallery/digital-pastoral-minecraft.webp', title: 'Sunrise over plains', source: 'Minecraft', genres: ['digital-pastoral', 'pastoral-folk'], style: 'low-poly', featured: true },
-  { id: 'dp-02', src: '/coalesce/gallery/digital-pastoral-proteus.webp', title: 'Island wandering', source: 'Proteus', genres: ['digital-pastoral'], style: 'low-poly' },
-  { id: 'dp-03', src: '/coalesce/gallery/digital-pastoral-firewatch.webp', title: 'Two Forks lookout', source: 'Firewatch', genres: ['digital-pastoral'], style: 'cel-shaded' },
+  { id: 'dp-01', src: '/paracosm/gallery/digital-pastoral-minecraft.webp', title: 'Sunrise over plains', source: 'Minecraft', genres: ['digital-pastoral', 'pastoral-folk'], style: 'low-poly', featured: true },
+  { id: 'dp-02', src: '/paracosm/gallery/digital-pastoral-proteus.webp', title: 'Island wandering', source: 'Proteus', genres: ['digital-pastoral'], style: 'low-poly' },
+  { id: 'dp-03', src: '/paracosm/gallery/digital-pastoral-firewatch.webp', title: 'Two Forks lookout', source: 'Firewatch', genres: ['digital-pastoral'], style: 'cel-shaded' },
 
   // Analogism
-  { id: 'an-01', src: '/coalesce/gallery/analog-signalis.webp', title: 'Signal decay', source: 'Signalis', genres: ['analogism', 'hauntology'], style: 'ps1-era', featured: true },
-  { id: 'an-02', src: '/coalesce/gallery/analog-cuphead.webp', title: 'Inkwell Isle', source: 'Cuphead', genres: ['analogism'], style: 'hand-painted' },
-  { id: 'an-03', src: '/coalesce/gallery/analog-tape-deck.webp', title: 'Reel-to-reel', genres: ['analogism'], style: 'concept-art' },
-  { id: 'an-04', src: '/coalesce/gallery/analog-braun-radio.webp', title: 'Braun T3 radio', genres: ['analogism'], style: 'concept-art' },
+  { id: 'an-01', src: '/paracosm/gallery/analog-signalis.webp', title: 'Signal decay', source: 'Signalis', genres: ['analogism', 'hauntology'], style: 'ps1-era', featured: true },
+  { id: 'an-02', src: '/paracosm/gallery/analog-cuphead.webp', title: 'Inkwell Isle', source: 'Cuphead', genres: ['analogism'], style: 'hand-painted' },
+  { id: 'an-03', src: '/paracosm/gallery/analog-tape-deck.webp', title: 'Reel-to-reel', genres: ['analogism'], style: 'concept-art' },
+  { id: 'an-04', src: '/paracosm/gallery/analog-braun-radio.webp', title: 'Braun T3 radio', genres: ['analogism'], style: 'concept-art' },
 ]
 
 export type Genre = {
@@ -126,13 +130,13 @@ export const genres: Genre[] = [
       'Gothic is not darkness for its own sake — it is the dignity of ruin, the beauty of impermanence, the weight of history pressing down on the present. When something feels Gothic, it carries the memory of something vast that has partially collapsed.',
     status: 'available',
     category: 'fantasy',
-    heroImage: '/coalesce/images/gothic-dark-fantasy-hero.png',
+    heroImage: '/paracosm/images/gothic-dark-fantasy-hero.png',
     abstract: 'Gothic Dark Fantasy is composed of elements that evoke ancient grandeur in decline — architecture that reaches upward but crumbles, light that filters through ruin, sound that resonates in vast empty spaces. Its precedents span centuries: from the pointed arches and gargoyles of medieval cathedrals, through the literary darkness of Shelley and Stoker, to the visual worlds of Dark Souls, Castlevania, and Devil May Cry. The genre is defined not by horror alone but by the tension between beauty and decay — bone-pale stone against deep shadow, choral voices over grinding metal, serif letterforms carved with the weight of ritual. What makes Gothic distinct from generic "dark" aesthetics is its reverence: every element carries history, ceremony, and the suggestion that something sacred has fallen. Use this not to frighten, but to give your work the gravity of something ancient and half-remembered.',
     coverColors: ['#1a1210', '#3d2b22', '#c4a882'],
     setTheTone: { tracks: [
-      { title: 'Castle Theme', artist: 'Devil May Cry OST', audioFile: '/coalesce/audio/gothic-dark-fantasy-01_DevilMayCry1.m4a' },
-      { title: 'Firelink Shrine', artist: 'Motoi Sakuraba', audioFile: '/coalesce/audio/gothic-dark-fantasy-02_DarkSouls1.m4a' },
-      { title: 'Circumradiant Dawn', artist: 'Dead Can Dance', audioFile: '/coalesce/audio/gothic-dark-fantasy-03_DeadCanDance1.m4a' },
+      { title: 'Castle Theme', artist: 'Devil May Cry OST', audioFile: '/paracosm/audio/gothic-dark-fantasy-01_DevilMayCry1.m4a' },
+      { title: 'Firelink Shrine', artist: 'Motoi Sakuraba', audioFile: '/paracosm/audio/gothic-dark-fantasy-02_DarkSouls1.m4a' },
+      { title: 'Circumradiant Dawn', artist: 'Dead Can Dance', audioFile: '/paracosm/audio/gothic-dark-fantasy-03_DeadCanDance1.m4a' },
     ]},
     variants: [],
     color: {
@@ -188,12 +192,12 @@ export const genres: Genre[] = [
       'Retro-futurism is the optimism of a civilization that believed progress was infinite. It is the aesthetic of a tomorrow that never came — chrome and curves, atomic confidence, the sincere belief that humanity was heading somewhere beautiful. It does not feel nostalgic. It feels like a promise.',
     status: 'available',
     category: 'scifi',
-    heroImage: '/coalesce/images/retrofuturism-hero.webp',
+    heroImage: '/paracosm/images/retrofuturism-hero.webp',
     abstract: 'Retro-futurism is what it\'s composed of: the optimism of mid-20th century space-age design, the sleek confidence of Googie architecture, the atomic-era conviction that the future would be chrome, curved, and clean. Its precedents are Syd Mead\'s concept art, the Jetsons, World\'s Fair pavilions, Fallout\'s irradiated Americana, and the Command & Conquer universe where the Cold War never ended but got cooler technology. The genre draws from real industrial design — streamlined locomotives, finned automobiles, vacuum-tube computers — and projects them into a tomorrow that was never built. What distinguishes retro-futurism from generic sci-fi is its sincerity: this is not dystopia, not warning. It is the genuine belief that progress would deliver beauty. The color is teal and cream, the shape is the aerodynamic curve, the sound is theremin over brass. Use this when you want your work to feel like a promise that was worth making.',
     coverColors: ['#1a2a3a', '#4db8c8', '#f0e4c2'],
     setTheTone: { tracks: [
-      { title: 'Industrial Funk', artist: 'Frank Klepacki', audioFile: '/coalesce/audio/retro-futurism-01_RedAlert-1.m4a' },
-      { title: 'H2O', artist: 'Surviving Mars OST', audioFile: '/coalesce/audio/retro-futurism-02_SurvivingMars1.m4a' },
+      { title: 'Industrial Funk', artist: 'Frank Klepacki', audioFile: '/paracosm/audio/retro-futurism-01_RedAlert-1.m4a' },
+      { title: 'H2O', artist: 'Surviving Mars OST', audioFile: '/paracosm/audio/retro-futurism-02_SurvivingMars1.m4a' },
     ]},
     variants: [],
     color: {
@@ -246,11 +250,11 @@ export const genres: Genre[] = [
       'Analogism is the aesthetic of physical signal — the hum of a transformer, the resistance of a knob, the warmth of tape saturation. It is not nostalgia for the past. It is reverence for the fact that something mechanical was once alive in a way that digital cannot replicate. Imperfection is not a flaw here. It is the proof of presence.',
     status: 'available',
     category: 'analog',
-    heroImage: '/coalesce/images/analogism-hero.webp',
+    heroImage: '/paracosm/images/analogism-hero.webp',
     abstract: 'Analogism is composed of the elements that define physical signal processing and pre-digital craft: the grain of film, the warmth of vacuum tubes, the tactile resistance of mechanical controls, the saturation of tape. Its precedents include the golden age of hi-fi audio, the analog synthesizer movement from Moog to Buchla, the photography of Saul Leiter, the industrial design of Braun under Dieter Rams, and the visual identity of labels like ECM and Blue Note. In games, it surfaces in the hand-drawn textures of Cuphead and the deliberate lo-fi grain of Signalis. What makes analogism a distinct direction — not just "vintage" — is its philosophical stance: imperfection is not a limitation to overcome but a quality to preserve. The wobble of a VHS tracking line, the crackle of vinyl, the uneven ink of a letterpress — these are evidence of a physical process, proof that a human hand was involved. Use this when you want your work to feel warm, present, and irreducibly real.',
     coverColors: ['#1a1510', '#5c4a30', '#c8a96e'],
     setTheTone: { tracks: [
-      { title: 'Complex', artist: 'Dope', audioFile: '/coalesce/audio/analogism-01_DopeComplex.m4a' },
+      { title: 'Complex', artist: 'Dope', audioFile: '/paracosm/audio/analogism-01_DopeComplex.m4a' },
     ]},
     variants: [],
     color: {
@@ -306,11 +310,11 @@ export const genres: Genre[] = [
       'Cyberpunk is the aesthetic of systems that have outgrown their makers — technology so dense and pervasive it has become the environment itself. It is not about the future. It is about the present accelerated past its breaking point. Beauty here is accidental, found in the gap between corporate perfection and human survival.',
     status: 'available',
     category: 'scifi',
-    heroImage: '/coalesce/images/cyberpunk-hero.jpg',
+    heroImage: '/paracosm/images/cyberpunk-hero.jpg',
     abstract: 'Cyberpunk is composed of the tension between ubiquitous technology and human marginalization — neon signage bleeding through rain, megacorporate towers above street-level chaos, interfaces layered over interfaces until the physical world is just another screen. Its precedents are foundational: Ridley Scott\'s Blade Runner, William Gibson\'s Sprawl trilogy, Katsuhiro Otomo\'s Akira, Ghost in the Shell, and the visual identity of Cyberpunk 2077. The genre draws equally from real urbanism — the density of Hong Kong\'s Kowloon Walled City, the signage saturation of Shinjuku, the infrastructure brutalism of Soviet housing blocks — and from speculative technology extrapolated to its logical extreme. What separates cyberpunk from generic sci-fi is its class consciousness: the technology is advanced, but it has not liberated anyone. The rich live above the smog, the poor hack what they can. The color is neon on black, the shape is the exposed cable and the holographic overlay, the sound is distorted synth over industrial percussion. Use this when you want your work to feel like a system that has exceeded its human operators.',
     coverColors: ['#080810', '#1a0a2e', '#00fff0'],
     setTheTone: { tracks: [
-      { title: 'Black Market', artist: 'Blue Stahli', audioFile: '/coalesce/audio/cyberpunk-01_CyberPunk1.m4a' },
+      { title: 'Black Market', artist: 'Blue Stahli', audioFile: '/paracosm/audio/cyberpunk-01_CyberPunk1.m4a' },
     ]},
     variants: [],
     color: {
@@ -363,11 +367,11 @@ export const genres: Genre[] = [
       'Pastoral Folk is the aesthetic of a world that grows rather than manufactures. It is slow time, seasonal rhythm, the knowledge that things take as long as they take. It does not romanticize poverty or ignore hardship — it finds dignity in proximity to the earth, in the weight of a tool that has been used for generations.',
     status: 'available',
     category: 'folk',
-    heroImage: '/coalesce/images/pastoral-folk-hero.jpg',
+    heroImage: '/paracosm/images/pastoral-folk-hero.jpg',
     abstract: 'Pastoral Folk is composed of elements that root art direction in the land itself — hand-worked materials, seasonal color shifts, organic textures, and sounds drawn from acoustic instruments and natural ambience. Its precedents reach from the pastoral paintings of Constable and the Barbizon school, through the folk revival movements in music (Fairport Convention, Pentangle, Fleet Foxes), to the visual worlds of The Elder Scrolls IV: Oblivion, The Witcher 3\'s Toussaint, and Studio Ghibli\'s rural landscapes. The genre is informed by real craft traditions: blacksmithing, weaving, woodcarving, ceramic glazing — processes where the material dictates the form. What makes pastoral folk distinct from generic "fantasy medieval" is its groundedness: it is not about kingdoms and heroes, but about the rhythm of harvest, the weight of a hand-forged tool, the warmth of firelight on rough-hewn walls. The color is earth and moss, the shape is the irregular curve of something grown or worn smooth, the sound is strings and wind. Use this when you want your work to feel rooted, unhurried, and connected to something older than industry.',
     coverColors: ['#1e1a12', '#6b7c3a', '#d4c48a'],
     setTheTone: { tracks: [
-      { title: 'Harvest Dawn (Classical Arrangement)', artist: 'Jeremy Soule', audioFile: '/coalesce/audio/pastoral-folk-01_Oblivion1.m4a' },
+      { title: 'Harvest Dawn (Classical Arrangement)', artist: 'Jeremy Soule', audioFile: '/paracosm/audio/pastoral-folk-01_Oblivion1.m4a' },
     ]},
     variants: [],
     color: {
@@ -420,12 +424,12 @@ export const genres: Genre[] = [
       'Digital Pastoral is the pastoral tradition reborn inside a simulation. It is Minecraft\'s voxel dirt, Stardew Valley\'s first spring, the sound of rain on a roof you built yourself. It does not dramatize nature — it renders it as a space you inhabit slowly. The aesthetic of worlds that run while you sleep and wait quietly for you to return.',
     status: 'available',
     category: 'folk',
-    heroImage: '/coalesce/images/digital-pastoral-hero.webp',
+    heroImage: '/paracosm/images/digital-pastoral-hero.webp',
     abstract: 'Digital Pastoral is composed of the intersection between computational environments and the pastoral tradition — the pixelated meadow, the procedurally generated forest, the lo-fi ambient soundtrack that plays while you plant seeds in a world made of code. Its precedents are Minecraft\'s voxel landscapes, Stardew Valley\'s seasonal farming loops, Animal Crossing\'s gentle social simulation, Proteus\'s abstract nature walks, and the ambient electronic work of artists like C418, Lena Raine, and Brian Eno. The genre draws from real pastoral aesthetics — rolling hills, soft light, the sound of water over stone — but renders them through a digital lens that is self-aware of its own abstraction. What makes digital pastoral distinct from traditional pastoral is its comfort with artificiality: the sunrise is computed, the rain is a particle system, and that is not a flaw but a feature. It finds peace not in escaping technology but in building quiet spaces within it. The color is muted green and warm gold, the shape is the soft voxel and the rounded pixel, the sound is synthesizer pretending to be wind. Use this when you want your work to feel like a place someone built because they needed somewhere calm to exist.',
     coverColors: ['#1a2d1a', '#4a6b3a', '#c8b870'],
     setTheTone: { tracks: [
-      { title: 'Subwoofer Lullaby', artist: 'C418', audioFile: '/coalesce/audio/pastoral-digital-01_Minecraft1.m4a' },
-      { title: 'Harvest Dawn', artist: 'Jeremy Soule', audioFile: '/coalesce/audio/pastoral_digital-01_Oblivion1.m4a' },
+      { title: 'Subwoofer Lullaby', artist: 'C418', audioFile: '/paracosm/audio/pastoral-digital-01_Minecraft1.m4a' },
+      { title: 'Harvest Dawn', artist: 'Jeremy Soule', audioFile: '/paracosm/audio/pastoral_digital-01_Oblivion1.m4a' },
     ]},
     variants: [],
     color: {
